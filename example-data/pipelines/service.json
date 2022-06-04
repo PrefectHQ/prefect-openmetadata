@@ -1,0 +1,6 @@
+{
+	"name": "prefect_service",
+	"serviceType": "Prefect",
+	"description": "Prefect service",
+	"pipelineUrl": "http://localhost:4200"
+}

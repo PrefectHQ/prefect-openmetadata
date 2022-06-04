@@ -1,0 +1,2 @@
+prefect>=2.0b
+openmetadata-ingestion[docker]
