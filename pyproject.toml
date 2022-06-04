@@ -1,0 +1,21 @@
+[tool.interrogate]
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = false
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = false
+ignore-module = true
+ignore-nested-functions = false
+ignore-nested-classes = true
+ignore-setters = false
+fail-under = 80
+exclude = ["setup.py", "docs", "tests"]
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+verbose = 1
+quiet = false
+whitelist-regex = []
+color = true
+omit-covered-files = false
+generate-badge = "."
+badge-format = "svg"
