@@ -33,4 +33,3 @@ jobs:
           PREFECT_ORION_DATABASE_CONNECTION_URL: "sqlite+aiosqlite:///./orion-tests.db"
         run: |
           coverage run --branch -m pytest tests -vv
-          coverage report
