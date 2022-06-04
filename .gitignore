@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# OS files
+.DS_Store
+
+# VS Code
+.vscode
+
+# Jupyter notebook
+*.ipynb
+.tmp/
