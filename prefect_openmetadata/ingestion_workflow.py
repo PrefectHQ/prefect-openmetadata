@@ -16,10 +16,18 @@ class PrefectOpenMetadataIngestion(Workflow):
     Args:
          config: string with a JSON configuration file
     """
+
     def __int__(self, config: OpenMetadataWorkflowConfig):
+        """
+        Args:
+            config: string with a JSON configuration file
+        """
         super().__init__(config=config)
 
     def log_flow_status(self) -> None:
+        """
+        Log workflow status to the Prefect API backend
+        """
         logger = get_run_logger()
         logger.info("Source Status: %s", self.source.get_status().as_string())
         if hasattr(self, "stage"):
