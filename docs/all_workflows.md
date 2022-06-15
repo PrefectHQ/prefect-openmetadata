@@ -150,7 +150,7 @@ from prefect_openmetadata.flows import ingest_metadata
 
 config = """
 source:
-  type: snowflake
+  type: type: snowflake-usage
   serviceName: snowflake
   serviceConnection:
     config:
