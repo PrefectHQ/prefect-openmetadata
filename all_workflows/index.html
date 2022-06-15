@@ -13,7 +13,7 @@
     
     
       
-        <title>Run ingestion flow - prefect-openmetadata</title>
+        <title>Metadata worfklows with Snowflake - prefect-openmetadata</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#run-metadata-ingestion" class="md-skip">
+        <a href="#run-metadata-ingestion-usage-workflow-and-data-profiler-for-snowflake" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Run ingestion flow
+              Metadata worfklows with Snowflake
             
           </span>
         </div>
@@ -237,6 +237,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../run_ingestion_flow/" class="md-nav__link">
+        Run ingestion flow
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -249,12 +264,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Run ingestion flow
+          Metadata worfklows with Snowflake
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Run ingestion flow
+        Metadata worfklows with Snowflake
       </a>
       
         
@@ -273,16 +288,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-your-ingestion-spec" class="md-nav__link">
-    Configure your ingestion spec
+  <a href="#configure-your-profiling-spec" class="md-nav__link">
+    Configure your profiling spec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-ingestion-workflow-locally" class="md-nav__link">
-    Run ingestion workflow locally
+  <a href="#sample-ingestion-and-profiling-for-snowflake" class="md-nav__link">
+    Sample ingestion and profiling for Snowflake
   </a>
+  
+    <nav class="md-nav" aria-label="Sample ingestion and profiling for Snowflake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-sqlalchemy-package-for-your-connector" class="md-nav__link">
+    Install SQLAlchemy package for your connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-connection" class="md-nav__link">
+    Test the connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingest-your-metadata" class="md-nav__link">
+    Ingest your metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-your-data-and-add-data-quality-tests" class="md-nav__link">
+    Profile your data and add data quality tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-usage-query-patterns" class="md-nav__link">
+    Add usage query patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -290,21 +346,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../all_workflows/" class="md-nav__link">
-        Metadata worfklows with Snowflake
-      </a>
     </li>
   
 
@@ -396,16 +437,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-your-ingestion-spec" class="md-nav__link">
-    Configure your ingestion spec
+  <a href="#configure-your-profiling-spec" class="md-nav__link">
+    Configure your profiling spec
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-ingestion-workflow-locally" class="md-nav__link">
-    Run ingestion workflow locally
+  <a href="#sample-ingestion-and-profiling-for-snowflake" class="md-nav__link">
+    Sample ingestion and profiling for Snowflake
   </a>
+  
+    <nav class="md-nav" aria-label="Sample ingestion and profiling for Snowflake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-sqlalchemy-package-for-your-connector" class="md-nav__link">
+    Install SQLAlchemy package for your connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-connection" class="md-nav__link">
+    Test the connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ingest-your-metadata" class="md-nav__link">
+    Ingest your metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-your-data-and-add-data-quality-tests" class="md-nav__link">
+    Profile your data and add data quality tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-usage-query-patterns" class="md-nav__link">
+    Add usage query patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -421,45 +503,125 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/PrefectHQ/prefect-openmetadata/edit/master/docs/run_ingestion_flow.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/PrefectHQ/prefect-openmetadata/edit/master/docs/all_workflows.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="run-metadata-ingestion">Run metadata ingestion</h1>
-<h2 id="configure-your-ingestion-spec">Configure your ingestion spec</h2>
-<p>In the <a href="../install_openmetadata/">Install OpenMetadata</a> section, you cloned the <code>prefect-openmetadata</code> repository. This repository contains a directory <strong>example-data</strong> which you can use to ingest sample data into your <code>OpenMetadata</code> backend using Prefect. </p>
-<p>Here is a JSON configuration you can use in your flow to ingest that sample data:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">source</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-data</span><span class="w"></span>
-<span class="w">  </span><span class="nt">serviceName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample_data</span><span class="w"></span>
-<span class="w">  </span><span class="nt">serviceConnection</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">config</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SampleData</span><span class="w"></span>
-<span class="w">      </span><span class="nt">sampleDataFolder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;example-data&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">sourceConfig</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-<span class="nt">sink</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata-rest</span><span class="w"></span>
-<span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
-<span class="nt">workflowConfig</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">openMetadataServerConfig</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">hostPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8585/api</span><span class="w"></span>
-<span class="w">    </span><span class="nt">authProvider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-auth</span><span class="w"></span>
+<h1 id="run-metadata-ingestion-usage-workflow-and-data-profiler-for-snowflake">Run metadata ingestion, usage workflow and data profiler for Snowflake</h1>
+<p>This demo will walk you through the process of creating ingestion, usage and profiling workflows.</p>
+<h2 id="configure-your-profiling-spec">Configure your profiling spec</h2>
+<p>OpenMetadata heavily relies on schemas. You need to understand which arguments are required and which are optional, and which are important for your use case. The easiest way to identify the required and optional arguments of any ingestion or profiling workflow is to import the <code>OpenMetadataWorkflowConfig</code>. </p>
+<p>From this pydantic model, you can drill down into other components using your favorite IDE e.g. Pycharm or VSCode. From there, you can again drill down into <code>Source</code>, <code>SourceConfig</code>, <code>Sink</code>, etc.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">metadata.generated.schema.metadataIngestion.workflow</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">OpenMetadataWorkflowConfig</span><span class="p">,</span> <span class="n">Source</span><span class="p">,</span> <span class="n">SourceConfig</span><span class="p">,</span> <span class="n">Sink</span>
+<span class="p">)</span>
 </code></pre></div>
-<h2 id="run-ingestion-workflow-locally">Run ingestion workflow locally</h2>
-<p>Now you can paste the JSON-config from above as a string into your flow and run it:</p>
+<h2 id="sample-ingestion-and-profiling-for-snowflake">Sample ingestion and profiling for Snowflake</h2>
+<p>Let's demonstrate how you can profile your data and add data quality tests for a Snowflake data warehouse using Prefect. </p>
+<h3 id="install-sqlalchemy-package-for-your-connector">Install SQLAlchemy package for your connector</h3>
+<p>First, make sure that you have the <code>prefect-openmetadata</code> and the <code>snowflake-sqlalchemy</code> packages installed in your environment.  </p>
+<h3 id="test-the-connection">Test the connection</h3>
+<p>You can test the connection to your end destination using the following Prefect flow:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">validate_connection</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">connection:</span>
+<span class="s2">  config:</span>
+<span class="s2">    type: Snowflake</span>
+<span class="s2">    username: DEMO</span>
+<span class="s2">    password: xxx</span>
+<span class="s2">    account: xxx.us-east-2.aws</span>
+<span class="s2">    database: YOUR_DB</span>
+<span class="s2">    warehouse: COMPUTE_WH</span>
+<span class="s2">connectionType: Database</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">validate_connection</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="ingest-your-metadata">Ingest your metadata</h3>
+<p>You can use the configuration below as a template - make sure to adjust it to match your username, password, your database name, and further details about the tables and schemas you want to include. You may optionally ingest your dbt manifest and dbt catalog to display dbt models and dbt docs along with your tables and views.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">ingest_metadata</span>
 
 <span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">source:</span>
-<span class="s2">  type: sample-data</span>
-<span class="s2">  serviceName: sample_data</span>
+<span class="s2">  type: snowflake</span>
+<span class="s2">  serviceName: snowflake</span>
 <span class="s2">  serviceConnection:</span>
 <span class="s2">    config:</span>
-<span class="s2">      type: SampleData</span>
-<span class="s2">      sampleDataFolder: &quot;example-data&quot;</span>
-<span class="s2">  sourceConfig: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">      type: Snowflake</span>
+<span class="s2">      username: &quot;xxx&quot;</span>
+<span class="s2">      password: &quot;xxx&quot;</span>
+<span class="s2">      database: &quot;YOURDB&quot;</span>
+<span class="s2">      warehouse: &quot;COMPUTE_WH&quot;</span>
+<span class="s2">      account: &quot;YOUR_ACCOUNT.us-east-2.aws&quot;</span>
+<span class="s2">  sourceConfig:</span>
+<span class="s2">    config:</span>
+<span class="s2">      type: DatabaseMetadata</span>
+<span class="s2">      schemaFilterPattern:</span>
+<span class="s2">        includes: </span>
+<span class="s2">            - YOUR_SCHEMA</span>
+<span class="s2">      dbtConfigSource:</span>
+<span class="s2">        dbtCatalogFilePath: /Users/you/catalog.json</span>
+<span class="s2">        dbtManifestFilePath: /Users/you/manifest.json</span>
+<span class="s2">sink:</span>
+<span class="s2">  type: metadata-rest</span>
+<span class="s2">  config: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">workflowConfig:</span>
+<span class="s2">  loggerLevel: DEBUG</span>
+<span class="s2">  openMetadataServerConfig:</span>
+<span class="s2">    hostPort: http://localhost:8585/api</span>
+<span class="s2">    authProvider: no-auth</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">ingest_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="profile-your-data-and-add-data-quality-tests">Profile your data and add data quality tests</h3>
+<p>Here is a flow to profile the previously ingested data:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">profile_metadata</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">source:</span>
+<span class="s2">  type: snowflake</span>
+<span class="s2">  serviceName: snowflake</span>
+<span class="s2">  serviceConnection:</span>
+<span class="s2">    config:</span>
+<span class="s2">      type: Snowflake</span>
+<span class="s2">      username: &quot;xxx&quot;</span>
+<span class="s2">      password: &quot;xxx&quot;</span>
+<span class="s2">      database: &quot;YOURDB&quot;</span>
+<span class="s2">      warehouse: &quot;COMPUTE_WH&quot;</span>
+<span class="s2">      account: &quot;YOUR_ACCOUNT.us-east-2.aws&quot;</span>
+<span class="s2">  sourceConfig:</span>
+<span class="s2">    config:</span>
+<span class="s2">      type: Profiler</span>
+<span class="s2">      fqnFilterPattern:</span>
+<span class="s2">        includes:</span>
+<span class="s2">        - snowflake.ANNA.ANNA_DEMO.*</span>
+<span class="s2">      generateSampleData: true</span>
+<span class="s2">processor:</span>
+<span class="s2">  type: orm-profiler</span>
+<span class="s2">  config:</span>
+<span class="s2">    test_suite:</span>
+<span class="s2">      name: demo_data</span>
+<span class="s2">      tests:</span>
+<span class="s2">        - table: snowflake.ANNA.ANNA_DEMO.RAW_CUSTOMERS</span>
+<span class="s2">          table_tests:</span>
+<span class="s2">            - testCase:</span>
+<span class="s2">                config:</span>
+<span class="s2">                  value: 100</span>
+<span class="s2">                tableTestType: tableRowCountToEqual</span>
+<span class="s2">          column_tests:</span>
+<span class="s2">            - columnName: ID</span>
+<span class="s2">              testCase:</span>
+<span class="s2">                config:</span>
+<span class="s2">                  minValue: 1</span>
+<span class="s2">                  maxValue: 100</span>
+<span class="s2">                columnTestType: columnValuesToBeBetween</span>
 <span class="s2">sink:</span>
 <span class="s2">  type: metadata-rest</span>
 <span class="s2">  config: </span><span class="si">{}</span><span class="s2"></span>
@@ -470,10 +632,41 @@
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">profile_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="add-usage-query-patterns">Add usage query patterns</h3>
+<p>Finally, to ensure that you can see sample data and queries performed over given assets, run the following usage workflow (<em>as always, adjust to your needs</em>):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">ingest_metadata</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">source:</span>
+<span class="s2">  type: snowflake</span>
+<span class="s2">  serviceName: snowflake</span>
+<span class="s2">  serviceConnection:</span>
+<span class="s2">    config:</span>
+<span class="s2">      type: Snowflake</span>
+<span class="s2">      username: &quot;xxx&quot;</span>
+<span class="s2">      password: &quot;xxx&quot;</span>
+<span class="s2">      database: &quot;YOURDB&quot;</span>
+<span class="s2">      warehouse: &quot;COMPUTE_WH&quot;</span>
+<span class="s2">      account: &quot;YOUR_ACCOUNT.us-east-2.aws&quot;</span>
+<span class="s2">  sourceConfig:</span>
+<span class="s2">    config:</span>
+<span class="s2">      type: DatabaseUsage</span>
+<span class="s2">processor:</span>
+<span class="s2">  type: query-parser</span>
+<span class="s2">  config:</span>
+<span class="s2">    filter: &#39;&#39;</span>
+<span class="s2">workflowConfig:</span>
+<span class="s2">  openMetadataServerConfig:</span>
+<span class="s2">    hostPort: http://localhost:8585/api</span>
+<span class="s2">    authProvider: no-auth</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">ingest_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </code></pre></div>
-<p>After running your flow, you should see <strong>new users</strong>, <strong>datasets</strong>, <strong>dashboards,</strong> and other <strong>metadata</strong> in your OpenMetadata UI. Also, <strong>your Prefect UI</strong> will display the workflow run and will show the logs with details on which source system has been scanned and which data has been ingested.</p>
-<p><strong>Congratulations</strong> on building your first metadata ingestion workflow with OpenMetadata and Prefect! Head over to the next section to see how you can run this flow on schedule. </p>
+<p><strong>Congratulations</strong> on building your first metadata ingestion workflows with OpenMetadata and Prefect! Head over to the next section to see how you can run this flow on schedule. </p>
 
               
             </article>
@@ -489,7 +682,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../install_openmetadata/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install OpenMetadata" rel="prev">
+        <a href="../run_ingestion_flow/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Run ingestion flow" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -498,20 +691,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Install OpenMetadata
+              Run ingestion flow
             </div>
           </div>
         </a>
       
       
         
-        <a href="../all_workflows/" class="md-footer__link md-footer__link--next" aria-label="Next: Metadata worfklows with Snowflake" rel="next">
+        <a href="../schedule_ingestion_flow/" class="md-footer__link md-footer__link--next" aria-label="Next: Schedule ingestion flow" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Metadata worfklows with Snowflake
+              Schedule ingestion flow
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -9,15 +9,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.1">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.5">
     
     
       
-        <title>Flow examples - prefect-openmetadata</title>
+        <title>Flows & tasks - prefect-openmetadata</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c0b802b2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flow examples
+              Flows & tasks
             
           </span>
         </div>
@@ -254,6 +254,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../all_workflows/" class="md-nav__link">
+        Metadata worfklows with Snowflake
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../schedule_ingestion_flow/" class="md-nav__link">
         Schedule ingestion flow
       </a>
@@ -279,12 +294,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Flow examples
+          Flows & tasks
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Flow examples
+        Flows & tasks
       </a>
       
         
@@ -303,8 +318,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prefect_openmetadata.flows--prefect-flow-for-metadata-ingestion" class="md-nav__link">
-    Prefect flow for metadata ingestion
+  <a href="#prefect_openmetadata.flows--prefect-flows-and-tasks-for-openmetadata-workflows-include" class="md-nav__link">
+    Prefect flows and tasks for OpenMetadata workflows include:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.OpenMetadataFailedConnection" class="md-nav__link">
+    OpenMetadataFailedConnection
   </a>
   
 </li>
@@ -312,6 +334,41 @@
         <li class="md-nav__item">
   <a href="#prefect_openmetadata.flows.ingest_metadata" class="md-nav__link">
     ingest_metadata()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.make_test_connection" class="md-nav__link">
+    make_test_connection()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.profile_metadata" class="md-nav__link">
+    profile_metadata()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.run_ingestion_task" class="md-nav__link">
+    run_ingestion_task()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.run_profiling_task" class="md-nav__link">
+    run_profiling_task()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.validate_connection" class="md-nav__link">
+    validate_connection()
   </a>
   
 </li>
@@ -334,6 +391,21 @@
     <li class="md-nav__item">
       <a href="../ingestion_workflow/" class="md-nav__link">
         Ingestion workflow module
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profiler_workflow/" class="md-nav__link">
+        Profiler workflow module
       </a>
     </li>
   
@@ -366,8 +438,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prefect_openmetadata.flows--prefect-flow-for-metadata-ingestion" class="md-nav__link">
-    Prefect flow for metadata ingestion
+  <a href="#prefect_openmetadata.flows--prefect-flows-and-tasks-for-openmetadata-workflows-include" class="md-nav__link">
+    Prefect flows and tasks for OpenMetadata workflows include:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.OpenMetadataFailedConnection" class="md-nav__link">
+    OpenMetadataFailedConnection
   </a>
   
 </li>
@@ -375,6 +454,41 @@
         <li class="md-nav__item">
   <a href="#prefect_openmetadata.flows.ingest_metadata" class="md-nav__link">
     ingest_metadata()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.make_test_connection" class="md-nav__link">
+    make_test_connection()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.profile_metadata" class="md-nav__link">
+    profile_metadata()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.run_ingestion_task" class="md-nav__link">
+    run_ingestion_task()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.run_profiling_task" class="md-nav__link">
+    run_profiling_task()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prefect_openmetadata.flows.validate_connection" class="md-nav__link">
+    validate_connection()
   </a>
   
 </li>
@@ -409,7 +523,12 @@
 
   <div class="doc doc-contents first">
   
-      <h3 id="prefect_openmetadata.flows--prefect-flow-for-metadata-ingestion">Prefect flow for metadata ingestion</h3>
+      <h3 id="prefect_openmetadata.flows--prefect-flows-and-tasks-for-openmetadata-workflows-include">Prefect flows and tasks for OpenMetadata workflows include:</h3>
+<ul>
+<li>metadata ingestion workflow: information about your tables, view, schemas, etc</li>
+<li>usage ingestion workflow: query and audit logs showing usage patterns</li>
+<li>profiler workflow: profile data and run data validation tests</li>
+</ul>
 <p>Follow the main documentation for guidance on:</p>
 <ul>
 <li>installing and configuring <code>Prefect</code> and <code>OpenMetadata</code>,</li>
@@ -427,6 +546,35 @@
 
 
 
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="prefect_openmetadata.flows.OpenMetadataFailedConnection" class="doc doc-heading">
+        <code>OpenMetadataFailedConnection</code>
+
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Exception for failed connection attempts</p>
+
+
+        <details class="quote">
+          <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">OpenMetadataFailedConnection</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception for failed connection attempts&quot;&quot;&quot;</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  </div>
+
+</div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -440,6 +588,8 @@
 
   <div class="doc doc-contents ">
   
+      <p>Ingests raw metadata about tables, dashboards, users, topics, pipelines, etc.
+The same flow is used for usage ingestion.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -457,9 +607,19 @@
           <td>
                 <code>str</code>
           </td>
-          <td><p>JSON-formatted configuration</p></td>
+          <td><p>configuration spec, by default in YAML, optionally in JSON</p></td>
           <td>
               <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>is_json</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>flag whether <code>config</code> is a JSON spec rather than YAML</p></td>
+          <td>
+                <code>False</code>
           </td>
         </tr>
     </tbody>
@@ -469,59 +629,558 @@
     <p>Flow ingesting metadata using Prefect:
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">ingest_metadata</span>
 
-<span class="n">json_config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;See an example in the section: Run ingestion flow&quot;&quot;&quot;</span>
+<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;See an example in the section: Run ingestion flow&quot;&quot;&quot;</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">ingest_metadata</span><span class="p">(</span><span class="n">json_config</span><span class="p">)</span>
+    <span class="n">ingest_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </code></pre></div></p>
 
       <details class="quote">
         <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@flow</span>
-<span class="k">def</span> <span class="nf">ingest_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@flow</span>
+<span class="k">def</span> <span class="nf">ingest_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_json</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Ingests raw metadata about tables, dashboards, users, topics, pipelines, etc.</span>
+<span class="sd">    The same flow is used for usage ingestion.</span>
+
 <span class="sd">    Args:</span>
-<span class="sd">        config: JSON-formatted configuration</span>
+<span class="sd">        config: configuration spec, by default in YAML, optionally in JSON</span>
+<span class="sd">        is_json: flag whether `config` is a JSON spec rather than YAML</span>
 
 <span class="sd">    Examples:</span>
 <span class="sd">        Flow ingesting metadata using Prefect:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        from prefect_openmetadata.flows import ingest_metadata</span>
 
-<span class="sd">        json_config = \&quot;&quot;&quot;</span><span class="n">See</span> <span class="n">an</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">section</span><span class="p">:</span> <span class="n">Run</span> <span class="n">ingestion</span> <span class="n">flow</span>\<span class="s2">&quot;&quot;&quot;</span>
+<span class="sd">        config = \&quot;&quot;&quot;</span><span class="n">See</span> <span class="n">an</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">section</span><span class="p">:</span> <span class="n">Run</span> <span class="n">ingestion</span> <span class="n">flow</span>\<span class="s2">&quot;&quot;&quot;</span>
 
 <span class="s2">        if __name__ == &quot;__main__&quot;:</span>
-<span class="s2">            ingest_metadata(json_config)</span>
+<span class="s2">            ingest_metadata(config)</span>
 <span class="s2">        ```</span>
 <span class="s2">    &quot;&quot;&quot;</span>
-    <span class="n">workflow_config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-    <span class="n">workflow</span> <span class="o">=</span> <span class="n">PrefectOpenMetadataIngestion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">workflow_config</span><span class="p">)</span>
+    <span class="n">om_workflow_config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_json</span> <span class="k">else</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="n">om_workflow_model</span> <span class="o">=</span> <span class="n">OpenMetadataWorkflowConfig</span><span class="o">.</span><span class="n">parse_obj</span><span class="p">(</span><span class="n">om_workflow_config</span><span class="p">)</span>
+    <span class="n">run_ingestion_task</span><span class="p">(</span><span class="n">om_workflow_model</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="prefect_openmetadata.flows.make_test_connection" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_test_connection</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Task maging a test connection to the specified OpenMetadata connection</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>conn_config</code></td>
+          <td>
+                <code><span title="metadata.generated.schema.api.services.ingestionPipelines.testServiceConnection.TestServiceConnectionRequest">TestServiceConnectionRequest</span></code>
+          </td>
+          <td><p>connection spec as a pydantic model</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@task</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">make_test_connection</span><span class="p">(</span><span class="n">conn_config</span><span class="p">:</span> <span class="n">TestServiceConnectionRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Task maging a test connection to the specified OpenMetadata connection</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        conn_config: connection spec as a pydantic model</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span> <span class="o">=</span> <span class="n">get_run_logger</span><span class="p">()</span>
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">get_connection</span><span class="p">(</span><span class="n">conn_config</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">test_connection</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Connection successful!&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">OpenMetadataFailedConnection</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Test connection failed&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">exc</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="prefect_openmetadata.flows.profile_metadata" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">profile_metadata</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Profiles metadata about tables, dashboards, users, topics, pipelines, etc.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>config</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>configuration spec, by default in YAML, optionally in JSON</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>is_json</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>flag whether <code>config</code> is a JSON spec rather than YAML</p></td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<p><strong>Examples:</strong></p>
+    <p>Flow profiling metadata using Prefect:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">profile_metadata</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;See an example in the section: Run profiling flow&quot;&quot;&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">profile_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div></p>
+
+      <details class="quote">
+        <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@flow</span>
+<span class="k">def</span> <span class="nf">profile_metadata</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_json</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Profiles metadata about tables, dashboards, users, topics, pipelines, etc.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        config: configuration spec, by default in YAML, optionally in JSON</span>
+<span class="sd">        is_json: flag whether `config` is a JSON spec rather than YAML</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        Flow profiling metadata using Prefect:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        from prefect_openmetadata.flows import profile_metadata</span>
+
+<span class="sd">        config = \&quot;&quot;&quot;</span><span class="n">See</span> <span class="n">an</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">section</span><span class="p">:</span> <span class="n">Run</span> <span class="n">profiling</span> <span class="n">flow</span>\<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">        if __name__ == &quot;__main__&quot;:</span>
+<span class="s2">            profile_metadata(config)</span>
+<span class="s2">        ```</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">om_workflow_config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_json</span> <span class="k">else</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="n">om_workflow_model</span> <span class="o">=</span> <span class="n">OpenMetadataWorkflowConfig</span><span class="o">.</span><span class="n">parse_obj</span><span class="p">(</span><span class="n">om_workflow_config</span><span class="p">)</span>
+    <span class="n">run_profiling_task</span><span class="p">(</span><span class="n">om_workflow_model</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="prefect_openmetadata.flows.run_ingestion_task" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_ingestion_task</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Task ingesting metadata into OpenMetadata backend</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>om_workflow_model</code></td>
+          <td>
+                <code><span title="metadata.generated.schema.metadataIngestion.workflow.OpenMetadataWorkflowConfig">OpenMetadataWorkflowConfig</span></code>
+          </td>
+          <td><p>ingestion spec as a pydantic model</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@task</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">run_ingestion_task</span><span class="p">(</span><span class="n">om_workflow_model</span><span class="p">:</span> <span class="n">OpenMetadataWorkflowConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Task ingesting metadata into OpenMetadata backend</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        om_workflow_model: ingestion spec as a pydantic model</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">workflow</span> <span class="o">=</span> <span class="n">PrefectOpenMetadataIngestion</span><span class="p">(</span><span class="n">om_workflow_model</span><span class="p">)</span>
     <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-    <span class="n">workflow</span><span class="o">.</span><span class="n">raise_from_status</span><span class="p">()</span>
     <span class="n">workflow</span><span class="o">.</span><span class="n">log_flow_status</span><span class="p">()</span>
+    <span class="n">workflow</span><span class="o">.</span><span class="n">raise_from_status</span><span class="p">()</span>
     <span class="n">workflow</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="prefect_openmetadata.flows.run_profiling_task" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_profiling_task</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Task profiling a given OpenMetadata source</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>om_workflow_model</code></td>
+          <td>
+                <code><span title="metadata.generated.schema.metadataIngestion.workflow.OpenMetadataWorkflowConfig">OpenMetadataWorkflowConfig</span></code>
+          </td>
+          <td><p>profiling spec as a pydantic model</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@task</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">run_profiling_task</span><span class="p">(</span><span class="n">om_workflow_model</span><span class="p">:</span> <span class="n">OpenMetadataWorkflowConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Task profiling a given OpenMetadata source</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        om_workflow_model: profiling spec as a pydantic model</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">workflow</span> <span class="o">=</span> <span class="n">PrefectOpenMetadataProfiler</span><span class="p">(</span><span class="n">om_workflow_model</span><span class="p">)</span>
+    <span class="n">workflow</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="n">workflow</span><span class="o">.</span><span class="n">log_flow_status</span><span class="p">()</span>
+    <span class="n">workflow</span><span class="o">.</span><span class="n">raise_from_status</span><span class="p">()</span>
+    <span class="n">workflow</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="prefect_openmetadata.flows.validate_connection" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate_connection</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Makes a SQLAlchemy connection based on a given JSON or YAML config for testing.
+Go to the <a href="https://github.com/open-metadata/OpenMetadata/tree/main/catalog-rest-service/src/main/resources/json/schema/entity/services/connections">OpenMetadata schema definitions</a>,
+to inspect required fields to connect with your desired system and crawl its metadata.</p>
+<p>Requires installing the required sqlalchemy subpackage for the relevant connector
+e.g. Snowflake connection requires <code>pip install snowflake-sqlalchemy</code></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>conn_config</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>connection spec as a string from a JSON spec</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>is_json</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>flag whether <code>conn_config</code> is a JSON spec rather than YAML</p></td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+<p><strong>Examples:</strong></p>
+    <p>Flow testing connection using Prefect:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">validate_connection</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">connection:</span>
+<span class="s2">  config:</span>
+<span class="s2">    type: Snowflake</span>
+<span class="s2">    username: DEMO</span>
+<span class="s2">    password: xxx</span>
+<span class="s2">    account: xxx.us-east-2.aws</span>
+<span class="s2">    database: YOUR_DB</span>
+<span class="s2">    warehouse: COMPUTE_WH</span>
+<span class="s2">connectionType: Database</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">validate_connection</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div></p>
+
+      <details class="quote">
+        <summary>Source code in <code>prefect_openmetadata/flows.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@flow</span>
+<span class="k">def</span> <span class="nf">validate_connection</span><span class="p">(</span><span class="n">conn_config</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">is_json</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Makes a SQLAlchemy connection based on a given JSON or YAML config for testing.</span>
+<span class="sd">    Go to the [OpenMetadata schema definitions](https://github.com/open-metadata/OpenMetadata/tree/main/catalog-rest-service/src/main/resources/json/schema/entity/services/connections),</span>
+<span class="sd">    to inspect required fields to connect with your desired system and crawl its metadata.</span>
+
+<span class="sd">    Requires installing the required sqlalchemy subpackage for the relevant connector</span>
+<span class="sd">    e.g. Snowflake connection requires `pip install snowflake-sqlalchemy`</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        conn_config: connection spec as a string from a JSON spec</span>
+<span class="sd">        is_json:  flag whether `conn_config` is a JSON spec rather than YAML</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        Flow testing connection using Prefect:</span>
+<span class="sd">        ```python</span>
+<span class="sd">        from prefect_openmetadata.flows import validate_connection</span>
+
+<span class="sd">        config = \&quot;&quot;&quot;</span>
+        <span class="n">connection</span><span class="p">:</span>
+          <span class="n">config</span><span class="p">:</span>
+            <span class="nb">type</span><span class="p">:</span> <span class="n">Snowflake</span>
+            <span class="n">username</span><span class="p">:</span> <span class="n">DEMO</span>
+            <span class="n">password</span><span class="p">:</span> <span class="n">xxx</span>
+            <span class="n">account</span><span class="p">:</span> <span class="n">xxx</span><span class="o">.</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">2.</span><span class="n">aws</span>
+            <span class="n">database</span><span class="p">:</span> <span class="n">YOUR_DB</span>
+            <span class="n">warehouse</span><span class="p">:</span> <span class="n">COMPUTE_WH</span>
+        <span class="n">connectionType</span><span class="p">:</span> <span class="n">Database</span>
+        \<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="s2">        if __name__ == &quot;__main__&quot;:</span>
+<span class="s2">            validate_connection(config)</span>
+<span class="s2">        ```</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">conn_spec_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">conn_config</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_json</span> <span class="k">else</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">conn_config</span><span class="p">)</span>
+    <span class="n">conn_model</span> <span class="o">=</span> <span class="n">TestServiceConnectionRequest</span><span class="o">.</span><span class="n">parse_obj</span><span class="p">(</span><span class="n">conn_spec_dict</span><span class="p">)</span>
+    <span class="n">make_test_connection</span><span class="p">(</span><span class="n">conn_model</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>
@@ -602,10 +1261,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.7f366e99.min.js"></script>
+      <script src="../assets/javascripts/bundle.431f3d41.min.js"></script>
       
     
   </body>
