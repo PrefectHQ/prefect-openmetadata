@@ -76,7 +76,15 @@ You can **install** **Prefect** using a single command:
 pip install -U "prefect>=2.0b"
 ```
 
-This will not only install the client library, but also an embedded API server and UI, which can *optionally* be started using:
+To make sure that OpenMetadata logs are stored in the Prefect backend and displayed in the UI, run the following command:
+```shell
+prefect config set PREFECT_LOGGING_EXTRA_LOGGERS='Ingestion,OMetaAPI,Metadata,Profiler,Utils'
+```
+
+This way, Prefect is aware of the extra loggers from OpenMetadata.
+
+
+When you install Prefect 2.0, this will not only install the client library, but also an embedded API server and UI, which can *optionally* be started using:
 
 ```yaml
 prefect orion start
