@@ -559,7 +559,11 @@
 <p>You can <strong>install</strong> <strong>Prefect</strong> using a single command:</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pip install -U &quot;prefect&gt;=2.0b&quot;</span><span class="w"></span>
 </code></pre></div>
-<p>This will not only install the client library, but also an embedded API server and UI, which can <em>optionally</em> be started using:</p>
+<p>To make sure that OpenMetadata logs are stored in the Prefect backend and displayed in the UI, run the following command:
+<div class="highlight"><pre><span></span><code>prefect config <span class="nb">set</span> <span class="nv">PREFECT_LOGGING_EXTRA_LOGGERS</span><span class="o">=</span><span class="s1">&#39;Ingestion,OMetaAPI,Metadata,Profiler,Utils&#39;</span>
+</code></pre></div></p>
+<p>This way, Prefect is aware of the <a href="https://discourse.prefect.io/t/how-to-add-extra-loggers-to-prefect-2-0/1040">extra loggers from OpenMetadata</a>.</p>
+<p>When you install Prefect 2.0, this will not only install the client library, but also an embedded API server and UI, which can <em>optionally</em> be started using:</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">prefect orion start</span><span class="w"></span>
 </code></pre></div>
 <p>If you navigate to the URL, you’ll be able to access a locally running Prefect Orion UI:</p>
