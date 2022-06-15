@@ -4,7 +4,7 @@
 
 In the [Install OpenMetadata](install_openmetadata.md) section, you cloned the `prefect-openmetadata` repository. This repository contains a directory **example-data** which you can use to ingest sample data into your `OpenMetadata` backend using Prefect. 
 
-Here is a JSON configuration you can use in your flow to ingest that sample data:
+Here is a configuration spec you can use in your flow to ingest that sample data:
 
 ```yaml
 source:
@@ -26,7 +26,7 @@ workflowConfig:
 
 ## Run ingestion workflow locally
 
-Now you can paste the JSON-config from above as a string into your flow and run it:
+Now you can paste the config from above as a string into your flow and run it:
 
 ```python
 from prefect_openmetadata.flows import ingest_metadata
