@@ -430,7 +430,7 @@
 <h1 id="run-metadata-ingestion">Run metadata ingestion</h1>
 <h2 id="configure-your-ingestion-spec">Configure your ingestion spec</h2>
 <p>In the <a href="../install_openmetadata/">Install OpenMetadata</a> section, you cloned the <code>prefect-openmetadata</code> repository. This repository contains a directory <strong>example-data</strong> which you can use to ingest sample data into your <code>OpenMetadata</code> backend using Prefect. </p>
-<p>Here is a JSON configuration you can use in your flow to ingest that sample data:</p>
+<p>Here is a configuration spec you can use in your flow to ingest that sample data:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">source</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample-data</span><span class="w"></span>
 <span class="w">  </span><span class="nt">serviceName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sample_data</span><span class="w"></span>
@@ -448,7 +448,7 @@
 <span class="w">    </span><span class="nt">authProvider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-auth</span><span class="w"></span>
 </code></pre></div>
 <h2 id="run-ingestion-workflow-locally">Run ingestion workflow locally</h2>
-<p>Now you can paste the JSON-config from above as a string into your flow and run it:</p>
+<p>Now you can paste the config from above as a string into your flow and run it:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">ingest_metadata</span>
 
 <span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
