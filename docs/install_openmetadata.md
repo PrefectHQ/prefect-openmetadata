@@ -81,7 +81,7 @@ To make sure that OpenMetadata logs are stored in the Prefect backend and displa
 prefect config set PREFECT_LOGGING_EXTRA_LOGGERS='Ingestion,OMetaAPI,Metadata,Profiler,Utils'
 ```
 
-This way, Prefect is aware of the extra loggers from OpenMetadata.
+This way, Prefect is aware of the [extra loggers from OpenMetadata](https://discourse.prefect.io/t/how-to-add-extra-loggers-to-prefect-2-0/1040).
 
 
 When you install Prefect 2.0, this will not only install the client library, but also an embedded API server and UI, which can *optionally* be started using:
