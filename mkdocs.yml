@@ -38,6 +38,8 @@ nav:
     - Home: index.md
     - Install OpenMetadata: install_openmetadata.md
     - Run ingestion flow: run_ingestion_flow.md
+    - Metadata worfklows with Snowflake: all_workflows.md
     - Schedule ingestion flow: schedule_ingestion_flow.md
-    - Flow examples: flows.md
+    - Flows & tasks: flows.md
     - Ingestion workflow module: ingestion_workflow.md
+    - Profiler workflow module: profiler_workflow.md

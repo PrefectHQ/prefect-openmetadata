@@ -1,0 +1,1 @@
+::: prefect_openmetadata.profiler_workflow

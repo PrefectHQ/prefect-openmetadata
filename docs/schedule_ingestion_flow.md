@@ -15,12 +15,12 @@ from prefect.flow_runners import SubprocessFlowRunner
 from prefect.orion.schemas.schedules import IntervalSchedule
 from prefect_openmetadata.flows import ingest_metadata
 
-json_config = """See an example in tests/test_flows.py"""
+config = """See previous examples"""
 
 DeploymentSpec(
     name="openmetadata-dev",
     flow=ingest_metadata,
-    parameters=dict(config=json_config),
+    parameters=dict(config=config),
     flow_runner=SubprocessFlowRunner(),
     schedule=IntervalSchedule(interval=timedelta(minutes=15)),
 )
@@ -44,7 +44,7 @@ To deploy this scheduled workflow to Prefect, run the following command from you
 prefect deployment create ingestion_flow.py
 ```
 
-## Deploy Prefect OpenMetadata ingestion flows
+## Deploy your execution layer to run your flows
 
 So far, we’ve looked at how you can **create** and **schedule** your workflow, but where does this code actually run? This is a place where the concepts of [storage](https://orion-docs.prefect.io/concepts/storage/), [work queues, and agents](https://orion-docs.prefect.io/concepts/work-queues/) become important. But don’t worry - all you need to know to get started is running one CLI command for each of those concepts.
 
