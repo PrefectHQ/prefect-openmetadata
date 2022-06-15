@@ -6,30 +6,22 @@ In the [Install OpenMetadata](install_openmetadata.md) section, you cloned the `
 
 Here is a JSON configuration you can use in your flow to ingest that sample data:
 
-```json
-{
-  "source": {
-    "type": "sample-data",
-    "serviceName": "sample_data",
-    "serviceConnection": {
-      "config": {
-        "type": "SampleData",
-        "sampleDataFolder": "example-data"
-      }
-    },
-    "sourceConfig": {}
-  },
-  "sink": {
-    "type": "metadata-rest",
-    "config": {}
-  },
-  "workflowConfig": {
-    "openMetadataServerConfig": {
-      "hostPort": "http://localhost:8585/api",
-      "authProvider": "no-auth"
-    }
-  }
-}
+```yaml
+source:
+  type: sample-data
+  serviceName: sample_data
+  serviceConnection:
+    config:
+      type: SampleData
+      sampleDataFolder: "example-data"
+  sourceConfig: {}
+sink:
+  type: metadata-rest
+  config: {}
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: http://localhost:8585/api
+    authProvider: no-auth
 ```
 
 ## Run ingestion workflow locally
@@ -40,29 +32,21 @@ Now you can paste the JSON-config from above as a string into your flow and run 
 from prefect_openmetadata.flows import ingest_metadata
 
 config = """
-{
-  "source": {
-    "type": "sample-data",
-    "serviceName": "sample_data",
-    "serviceConnection": {
-      "config": {
-        "type": "SampleData",
-        "sampleDataFolder": "example-data"
-      }
-    },
-    "sourceConfig": {}
-  },
-  "sink": {
-    "type": "metadata-rest",
-    "config": {}
-  },
-  "workflowConfig": {
-    "openMetadataServerConfig": {
-      "hostPort": "http://localhost:8585/api",
-      "authProvider": "no-auth"
-    }
-  }
-}
+source:
+  type: sample-data
+  serviceName: sample_data
+  serviceConnection:
+    config:
+      type: SampleData
+      sampleDataFolder: "example-data"
+  sourceConfig: {}
+sink:
+  type: metadata-rest
+  config: {}
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: http://localhost:8585/api
+    authProvider: no-auth
 """
 
 if __name__ == "__main__":

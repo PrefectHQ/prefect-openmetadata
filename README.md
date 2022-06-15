@@ -35,10 +35,10 @@ Head over to the [install OpenMetadata](install_openmetadata.md) page for detail
 ```python
 from prefect_openmetadata.flows import ingest_metadata
 
-json_config = """See an example in the section: Run ingestion flow"""
+config = """See an example in the section: Run ingestion flow"""
 
 if __name__ == "__main__":
-    ingest_metadata(json_config)
+    ingest_metadata(config)
 ```
 
 For more details, check the [run ingestion flow](run_ingestion_flow.md) section.
