@@ -32,6 +32,12 @@ class OpenMetadataFailedConnection(Exception):
 
 @task
 async def run_ingestion_task(om_workflow_model: OpenMetadataWorkflowConfig) -> None:
+    """
+    Task ingesting metadata into OpenMetadata backend
+
+    Args:
+        om_workflow_model: ingestion spec as a pydantic model
+    """
     workflow = PrefectOpenMetadataIngestion(om_workflow_model)
     workflow.execute()
     workflow.log_flow_status()
@@ -67,6 +73,12 @@ def ingest_metadata(config: str, is_json: bool = False) -> None:
 
 @task
 async def run_profiling_task(om_workflow_model: OpenMetadataWorkflowConfig) -> None:
+    """
+    Task profiling a given OpenMetadata source
+
+    Args:
+        om_workflow_model: profiling spec as a pydantic model
+    """
     workflow = PrefectOpenMetadataProfiler(om_workflow_model)
     workflow.execute()
     workflow.log_flow_status()
@@ -101,6 +113,12 @@ def profile_metadata(config: str, is_json: bool = False) -> None:
 
 @task
 async def make_test_connection(conn_config: TestServiceConnectionRequest) -> None:
+    """
+    Task maging a test connection to the specified OpenMetadata connection
+
+    Args:
+        conn_config: connection spec as a pydantic model
+    """
     logger = get_run_logger()
     connection = get_connection(conn_config.connection.config)
     try:

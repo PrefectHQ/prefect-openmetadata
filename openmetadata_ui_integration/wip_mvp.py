@@ -1,3 +1,6 @@
+"""
+API service for metadata ingestion directly from the OpenMetadata UI (no-code workflows)
+"""
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 from prefect.client import get_client
