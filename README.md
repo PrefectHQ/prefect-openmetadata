@@ -41,7 +41,7 @@ if __name__ == "__main__":
     ingest_metadata(config)
 ```
 
-For more details, check the [run ingestion flow](run_ingestion_flow.md) section.
+For more details, check the [run ingestion flow](docs/run_ingestion_flow.md) section.
 
 ### Schedule a metadata ingestion flow
 
@@ -54,7 +54,7 @@ DeploymentSpec(
 )
 ```
 
-For more details, check the [schedule ingestion flow](schedule_ingestion_flow.md) section.
+For more details, check the [schedule ingestion flow](docs/schedule_ingestion_flow.md) section.
 
 
 ## Resources
