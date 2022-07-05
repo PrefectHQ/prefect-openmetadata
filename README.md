@@ -28,7 +28,7 @@ pip install prefect-openmetadata
 
 ### Install `OpenMetadata` and ``Prefect 2.0``
 
-Head over to the [install OpenMetadata](install_openmetadata.md) page for detailed instructions on how to install and configure both platforms.
+Head over to the [install OpenMetadata](docs/install_openmetadata.md) page for detailed instructions on how to install and configure both platforms.
 
 ### Write and run metadata ingestion flow
 
