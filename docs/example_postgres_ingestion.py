@@ -1,5 +1,6 @@
 """
-pip install -r requirements.txt --no-deps
+pip install SQLAlchemy psycopg2
+
 Login to the UI with user admin, password admin
 and use the link below to see how to generate jwtToken:
 https://docs.open-metadata.org/how-to-guides/cli-ingestion-with-basic-auth

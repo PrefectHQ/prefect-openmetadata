@@ -1,5 +1,2 @@
-prefect==2.7.0
-openmetadata-ingestion[docker]==0.13.1.2
-SQLAlchemy==1.4.46
-psycopg2==2.9.5
-snowflake-sqlalchemy==1.4.4
+prefect
+openmetadata-ingestion[docker]
