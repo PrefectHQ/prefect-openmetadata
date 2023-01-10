@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://prefecthq.github.io/prefect-openmetadata/schedule_ingestion_flow/">
       
+      
+        <link rel="prev" href="../all_workflows/">
+      
+      
+        <link rel="next" href="../flows/">
+      
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -19,17 +25,13 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#2094f3">
-        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
       
       
+
     
     
     
@@ -46,10 +48,11 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -60,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
     
@@ -125,7 +128,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -149,7 +152,7 @@
         <a href="https://github.com/prefecthq/prefect-openmetadata" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -193,7 +196,7 @@
       <a href="https://github.com/prefecthq/prefect-openmetadata" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -319,8 +322,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-prefect-20-in-the-cloud" class="md-nav__link">
-    Using Prefect 2.0 in the Cloud
+  <a href="#using-prefect-in-the-cloud" class="md-nav__link">
+    Using Prefect in the Cloud
   </a>
   
 </li>
@@ -426,8 +429,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-prefect-20-in-the-cloud" class="md-nav__link">
-    Using Prefect 2.0 in the Cloud
+  <a href="#using-prefect-in-the-cloud" class="md-nav__link">
+    Using Prefect in the Cloud
   </a>
   
 </li>
@@ -447,126 +450,61 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/edit/main/docs/schedule_ingestion_flow.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
+
+  
+  
 
 
 
 <h1 id="schedule-and-deploy-metadata-ingestion-flows">Schedule and deploy metadata ingestion flows</h1>
 <h2 id="schedule-your-openmetadata-ingestion-flows-with-prefect">Schedule your OpenMetadata ingestion flows with Prefect</h2>
-<p>Ingesting your data via manually executed scripts is great for initial exploration, but in order to build a reliable metadata platform, you need to run those workflows on a regular cadence. That’s where you can leverage Prefect <a href="https://www.notion.so/OM-Docs-01b7a7fbf2ec44f7ab9fa08085b51d14">schedules</a> and <a href="https://orion-docs.prefect.io/concepts/deployments/">deployments</a>.</p>
-<p>Here is how you can add a <code>DeploymentSpec</code> to your flow to ensure that your metadata gets refreshed every 15 minutes:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># ingestion_flow.py</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
-<span class="kn">from</span> <span class="nn">prefect.deployments</span> <span class="kn">import</span> <span class="n">DeploymentSpec</span>
-<span class="kn">from</span> <span class="nn">prefect.flow_runners</span> <span class="kn">import</span> <span class="n">SubprocessFlowRunner</span>
-<span class="kn">from</span> <span class="nn">prefect.orion.schemas.schedules</span> <span class="kn">import</span> <span class="n">IntervalSchedule</span>
-<span class="kn">from</span> <span class="nn">prefect_openmetadata.flows</span> <span class="kn">import</span> <span class="n">ingest_metadata</span>
-
-<span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;See previous examples&quot;&quot;&quot;</span>
-
-<span class="n">DeploymentSpec</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;openmetadata-dev&quot;</span><span class="p">,</span>
-    <span class="n">flow</span><span class="o">=</span><span class="n">ingest_metadata</span><span class="p">,</span>
-    <span class="n">parameters</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">),</span>
-    <span class="n">flow_runner</span><span class="o">=</span><span class="n">SubprocessFlowRunner</span><span class="p">(),</span>
-    <span class="n">schedule</span><span class="o">=</span><span class="n">IntervalSchedule</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">15</span><span class="p">)),</span>
-<span class="p">)</span>
+<p>Ingesting your data via manually executed scripts is great for initial exploration, but in order to build a reliable metadata platform, you need to run those workflows on a regular cadence. That’s where you can leverage Prefect <a href="https://docs.prefect.io/concepts/schedules/">schedules</a> and <a href="https://docs.prefect.io/concepts/deployments/">deployments</a>.</p>
+<p>Here is how you can create a <code>Deployment</code> to ensure that your metadata ingestion flow <code>ingest_metadata</code> in the script <code>myflow.py</code> gets refreshed every 15 minutes:</p>
+<div class="highlight"><pre><span></span><code>prefect<span class="w"> </span>deployment<span class="w"> </span>build<span class="w"> </span>-a<span class="w"> </span>-n<span class="w"> </span>dev<span class="w"> </span>myflow.py:ingest_metadata<span class="w"> </span>--interval<span class="w"> </span><span class="m">900</span>
 </code></pre></div>
-<p>Here is an explanation of the <code>DeploymentSpec</code> arguments:</p>
+<p>Here is an explanation of the <code>prefect deployment build</code> flags:</p>
 <ul>
-<li><code>name</code> - specifies the name of the deployment - you could use it to differentiate between a deployment for development and production environment</li>
-<li><code>flow</code> - points to the flow object, i.e. the flow function name</li>
-<li>
-<p><code>flow_runner</code> - specifies how the flow run should be deployed; this allows you to deploy the flow run as a docker container, a Kubernetes job, or as a local subprocess - for example, you can deploy it as a subprocess running in a Conda virtual environment named "openmetadata" using the syntax: </p>
-<div class="highlight"><pre><span></span><code><span class="n">SubprocessFlowRunner</span><span class="p">(</span><span class="n">condaenv</span><span class="o">=</span><span class="s2">&quot;openmetadata&quot;</span><span class="p">)</span>
-</code></pre></div>
-</li>
-<li>
-<p><code>schedule</code> - allows you to choose and customize your desired schedule class; in this example, we are using a simple <code>IntervalSchedule</code> triggering a new flow run every 15 minutes. With the asynchronous scheduling service in Prefect 2.0, you could even schedule your flow to run every 10 seconds if you need your metadata to be always up-to-date.</p>
-</li>
+<li><code>-a</code> - will automatically register the resulting deployment with the API</li>
+<li><code>-n</code> - specifies the name of the deployment - you could use it to differentiate between a deployment for development and production environment</li>
+<li><code>myflow.py:ingest_metadata</code> - entrypoint to the flow object, i.e. the Python script and the flow function name</li>
+<li><code>--interval 900</code> - schedule interval in seconds, here: triggering a new flow run every 15 minutes. With the asynchronous scheduling service in Prefect 2.0, you can schedule your flow to run even every 10 seconds if you need your metadata to be updated near real-time.</li>
 </ul>
-<p>To deploy this scheduled workflow to Prefect, run the following command from your CLI:</p>
-<div class="highlight"><pre><span></span><code><span class="n">prefect</span> <span class="n">deployment</span> <span class="n">create</span> <span class="n">ingestion_flow</span><span class="o">.</span><span class="n">py</span>
-</code></pre></div>
 <h2 id="deploy-your-execution-layer-to-run-your-flows">Deploy your execution layer to run your flows</h2>
-<p>So far, we’ve looked at how you can <strong>create</strong> and <strong>schedule</strong> your workflow, but where does this code actually run? This is a place where the concepts of <a href="https://orion-docs.prefect.io/concepts/storage/">storage</a>, <a href="https://orion-docs.prefect.io/concepts/work-queues/">work queues, and agents</a> become important. But don’t worry - all you need to know to get started is running one CLI command for each of those concepts.</p>
-<p><strong>1) Storage</strong></p>
-<p>Storage is used to tell Prefect where your workflow code lives. To configure storage, run:</p>
-<div class="highlight"><pre><span></span><code><span class="n">prefect</span> <span class="n">storage</span> <span class="n">create</span>
+<p>So far, we’ve looked at how you can <strong>create</strong> and <strong>schedule</strong> your workflow, but where does this code actually run? This is a place where the concepts of <a href="https://docs.prefect.io/concepts/storage/">storage</a> and <a href="">infrastructure</a> blocks, as well as <a href="https://docs.prefect.io/concepts/work-queues/">work queues and agents</a> become important. But don’t worry - all you need to know to get started is running a single CLI command:</p>
+<div class="highlight"><pre><span></span><code>prefect<span class="w"> </span>agent<span class="w"> </span>start<span class="w"> </span>-q<span class="w"> </span>default
 </code></pre></div>
-<p>The CLI will guide you through the process to select the storage of your choice - to get started you can select the Local Storage and choose some path in your file system. You can then directly select it as your default storage.</p>
-<p><strong>2) Work Queue</strong></p>
-<p>Work queues collect scheduled runs and agents pick those up from the queue. To create a default work queue, run:</p>
-<div class="highlight"><pre><span></span><code><span class="n">prefect</span> <span class="n">work</span><span class="o">-</span><span class="n">queue</span> <span class="n">create</span> <span class="n">default</span>
-</code></pre></div>
-<p><strong>3) Agent</strong></p>
-<p>Agents are lightweight processes that poll their work queues for scheduled runs and execute workflows on the infrastructure you specified on the <code>DeploymentSpec</code>’s <code>flow_runner</code>. To create an agent corresponding to the default work queue, run:</p>
-<div class="highlight"><pre><span></span><code><span class="n">prefect</span> <span class="n">agent</span> <span class="n">start</span> <span class="n">default</span>
-</code></pre></div>
-<p>That’s all you need! Once you have executed those three commands, your scheduled deployments (<em>such as the one we defined using <code>ingestion_flow.py</code> above</em>) are now scheduled, and Prefect will ensure that your metadata stays up-to-date.</p>
-<p>You can observe the state of your metadata ingestion workflows from the <a href="https://orion-docs.prefect.io/ui/overview/">Prefect Orion UI</a>. The UI will also include detailed logs showing which metadata got updated to ensure your data platform remains healthy and observable.</p>
-<h2 id="using-prefect-20-in-the-cloud">Using Prefect 2.0 in the Cloud</h2>
-<p>If you want to move beyond this local installation, you can deploy Prefect 2.0 to run your OpenMetadata ingestion workflows by:</p>
+<p>Once you have executed that command, your scheduled deployments (<em>such as the one we defined using <code>myflow.py</code> above</em>) are now scheduled, and Prefect will ensure that your metadata stays up-to-date.</p>
+<p>You can observe the state of your metadata ingestion workflows from the <a href="https://docs.prefect.io/ui/overview/">Prefect Orion UI</a>. The UI will also include detailed logs showing which metadata got updated to ensure your data platform remains healthy and observable.</p>
+<h2 id="using-prefect-in-the-cloud">Using Prefect in the Cloud</h2>
+<p>If you want to move beyond this local installation, you can deploy Prefect to run your OpenMetadata ingestion workflows by:</p>
 <ul>
 <li>self-hosting the orchestration layer - see the <a href="https://discourse.prefect.io/t/how-to-self-host-prefect-2-0-orchestration-layer-list-of-resources-to-get-started/952">list of resources on Prefect Discourse</a>,</li>
-<li>or signing up for <a href="https://beta.prefect.io/">Prefect Cloud 2.0</a> - <a href="https://discourse.prefect.io/t/how-to-get-started-with-prefect-cloud-2-0/539">the following page</a> will walk you through the process.</li>
+<li>or signing up for <a href="https://app.prefect.cloud/">Prefect Cloud</a> - <a href="https://docs.prefect.io/ui/cloud-getting-started/">the following page</a> will walk you through the process.</li>
 </ul>
-<p>For various deployment options of OpenMetadata, check the “Deploy” section of <a href="https://docs.open-metadata.org/">this documentation</a>.</p>
+<p>For various deployment options of OpenMetadata, check the <a href="https://docs.open-metadata.org/deployment">Deployment documentation</a>.</p>
 <h2 id="questions-about-using-openmetadata-with-prefect">Questions about using OpenMetadata with Prefect</h2>
 <p>If you have any questions about configuring Prefect, post your question on <a href="https://discourse.prefect.io/">Prefect Discourse</a> or in the <a href="https://www.prefect.io/slack/">Prefect Community Slack</a>.</p>
 <p>And if you need support for OpenMetadata, get in touch on <a href="https://slack.open-metadata.org">OpenMetadata Slack</a>.</p>
 
-              
-            </article>
-            
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../all_workflows/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Metadata worfklows with Snowflake" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Metadata worfklows with Snowflake
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../flows/" class="md-footer__link md-footer__link--next" aria-label="Next: Flows &amp; tasks" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Flows & tasks
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -588,10 +526,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.85cb4492.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a877e258.min.js"></script>
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
     
   </body>

@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/all_workflows/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/flows/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/ingestion_workflow/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/install_openmetadata/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/profiler_workflow/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/run_ingestion_flow/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://prefecthq.github.io/prefect-openmetadata/schedule_ingestion_flow/</loc>
-         <lastmod>2022-06-18</lastmod>
+         <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
