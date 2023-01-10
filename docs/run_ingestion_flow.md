@@ -4,6 +4,40 @@
 
 Here is a simple flow example demonstratig how you can ingest data from a Postgres database into your `OpenMetadata` backend using Prefect: [example_postgres_ingestion.py](./example_postgres_ingestion.py).
 
+```python
+from prefect_openmetadata.flows import ingest_metadata
+
+postgres = """
+source:
+  type: postgres
+  serviceName: local_postgres
+  serviceConnection:
+    config:
+      type: Postgres
+      username: postgres
+      password: postgres
+      hostPort: localhost:5432
+  sourceConfig:
+    config:
+      markDeletedTables: true
+      includeTables: true
+      includeViews: false
+sink:
+  type: metadata-rest
+  config: {}
+workflowConfig:
+  openMetadataServerConfig:
+    hostPort: http://localhost:8585/api
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: 'your_token'
+"""
+
+if __name__ == "__main__":
+    ingest_metadata(postgres)
+
+```
+
 Each flow is based on a configuration YAML or JSON spec that follows similar structure to the following:
 
 ```yaml

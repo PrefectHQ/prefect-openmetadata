@@ -60,15 +60,16 @@ You should see a page similar to the following as the landing page for the OpenM
 
 The challenge with the metadata ingestion is to ensure that this process can be **automated** and can run **reliably**, either on a regular interval, or ad-hoc. This is where [Prefect](http://prefect.io/) can help.
 
-[Prefect 2.0](https://www.prefect.io/blog/introducing-prefect-2-0/) is a general-purpose orchestration and dataflow coordination platform allowing you to build, run, schedule, and operationalize your dataflow at scale. It supports both [batch and streaming workflows](https://discourse.prefect.io/t/how-to-use-prefect-2-0-for-streaming-and-event-driven-use-cases/1000) and provides an excellent developer experience allowing you to run your flows locally and seamlessly move to production and to Cloud when you’re ready.
+[Prefect](https://www.prefect.io/guide/blog/the-global-coordination-plane/) is a general-purpose orchestration and dataflow coordination platform allowing you to build, run, schedule, and operationalize your dataflow at scale. It supports both [batch and streaming workflows](https://discourse.prefect.io/t/how-to-use-prefect-2-0-for-streaming-and-event-driven-use-cases/1000) and provides an excellent developer experience allowing you to run your flows locally and seamlessly move to production and to Cloud when you’re ready.
+
 
 Among [many other features](https://www.prefect.io/opensource/v2/), it natively supports:
 
 - dynamic runtime-discoverable and modular workflows,
 - passing data between tasks,
-- running your workflows on [various execution platforms](https://orion-docs.prefect.io/concepts/flow-runners/) (on-prem, cloud, Docker, Kubernetes) while maintaining privacy via a [hybrid execution model](https://www.prefect.io/why-prefect/hybrid-model/),
-- scaling out for parallel and concurrent execution with [async, Dask, and Ray](https://orion-docs.prefect.io/concepts/task-runners/),
-- various integrations through [Prefect Collections](https://orion-docs.prefect.io/collections/overview/) - such as this one!
+- running your workflows on various execution platforms (on-prem, cloud, Docker, Kubernetes, serverless containers, and more) while maintaining privacy via a [hybrid execution model](https://www.prefect.io/why-prefect/hybrid-model/),
+- scaling out for parallel and concurrent execution with [async, Dask, and Ray](https://docs.prefect.io/concepts/task-runners/),
+- various integrations through [Prefect Collections](https://docs.prefect.io/collections/overview/) - such as this one!
 
 ### Install Prefect 
 
@@ -89,7 +90,7 @@ This way, Prefect is aware of the [extra loggers from OpenMetadata](https://disc
 
 ### Self-hosted Orion server
 
-When you install Prefect 2.0, this will not only install the client library, but also an embedded API server and UI, which can *optionally* be started using:
+When you install Prefect, this will not only install the client library, but also an ephemeral API server and UI, which can be *optionally* started using:
 
 ```yaml
 prefect orion start

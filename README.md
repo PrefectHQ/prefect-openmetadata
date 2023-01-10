@@ -4,7 +4,7 @@
 
 Using [Prefect](https://prefect.io/) and [OpenMetadata](https://open-metadata.org/) together will help you build and maintain a **data platform you can trust**. 
 
-Prefect allows you to orchestrate your data workflows and provides visibility into the health of your **workflow execution** and **workflow lineage**. With OpenMetadata integration, you can enrich your orchestration system with metadata about data lineage, data catalog, data quality and governance, giving you a single pane of glass about the health of your system. 
+Prefect allows you to coordinate your dataflow and provides visibility into the health of your **workflow execution** and **workflow lineage**. With OpenMetadata integration, you can enrich your orchestration system with metadata about data lineage, data catalog, data quality and governance, giving you more information about the health of your system. 
 
 
 ## Getting Started
@@ -16,8 +16,6 @@ Requires an installation of Python 3.8+.
 
 We recommend using a Python virtual environment manager such as pipenv, conda or virtualenv.
 
-This ``prefect-openmetadata`` package is designed to work with Prefect 2.0. For more information about how to use Prefect, please refer to the [documentation](https://orion-docs.prefect.io/).
-
 ### Installation
 
 Install `prefect-openmetadata` with `pip`:
@@ -26,9 +24,9 @@ Install `prefect-openmetadata` with `pip`:
 pip install prefect-openmetadata
 ```
 
-### Install `OpenMetadata` and ``Prefect 2.0``
+### Install `OpenMetadata` and ``Prefect``
 
-Head over to the [install OpenMetadata](docs/install_openmetadata.md) page for detailed instructions on how to install and configure both platforms.
+Head over to the [install OpenMetadata](install_openmetadata.md) page for detailed instructions on how to install and configure both platforms.
 
 ### Write and run metadata ingestion flow
 
@@ -46,15 +44,11 @@ For more details, check the [run ingestion flow](docs/run_ingestion_flow.md) sec
 ### Schedule a metadata ingestion flow
 
 Simple example:
-```python
-DeploymentSpec(
-    name="openmetadata-dev",
-    flow=ingest_metadata,
-    schedule=IntervalSchedule(interval=timedelta(minutes=15)),
-)
+```bash
+prefect deployment build -a -n dev myflow.py:ingest_metadata --interval 900
 ```
 
-For more details, check the [schedule ingestion flow](docs/schedule_ingestion_flow.md) section.
+For more details, check the [schedule ingestion flow](schedule_ingestion_flow.md) section.
 
 
 ## Resources
