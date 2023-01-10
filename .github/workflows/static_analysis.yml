@@ -1,8 +1,6 @@
 name: Static analysis
 
-on:
-  workflow_dispatch:
-#on: [pull_request]
+on: [pull_request]
 
 jobs:
   pre-commit-checks:
