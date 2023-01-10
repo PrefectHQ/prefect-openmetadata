@@ -14,7 +14,7 @@ import yaml
 from metadata.generated.schema.metadataIngestion.workflow import (
     OpenMetadataWorkflowConfig,
 )
-from metadata.generated.schema.api.services.ingestionPipelines.testServiceConnection import (
+from metadata.generated.schema.api.services.ingestionPipelines.testServiceConnection import (  # noqa
     TestServiceConnectionRequest,
 )
 from metadata.utils.connections import (
@@ -163,7 +163,7 @@ def validate_connection(conn_config: str, is_json: bool = False):
         if __name__ == "__main__":
             validate_connection(config)
         ```
-    """
+    """  # noqa
     conn_spec_dict = json.loads(conn_config) if is_json else yaml.safe_load(conn_config)
     conn_model = TestServiceConnectionRequest.parse_obj(conn_spec_dict)
     make_test_connection(conn_model)
