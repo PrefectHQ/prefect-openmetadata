@@ -49,6 +49,8 @@ Visit the following URL to confirm you can access the UI and start exploring Ope
 http://localhost:8585
 ```
 
+Login with username `admin` and password `admin`. 
+
 You should see a page similar to the following as the landing page for the OpenMetadata UI.
 
 ![](assets/ui2.jpeg)
@@ -58,7 +60,7 @@ You should see a page similar to the following as the landing page for the OpenM
 
 The challenge with the metadata ingestion is to ensure that this process can be **automated** and can run **reliably**, either on a regular interval, or ad-hoc. This is where [Prefect](http://prefect.io/) can help.
 
-[Prefect 2.0](https://www.prefect.io/blog/introducing-prefect-2-0/) is a general-purpose workflow orchestration platform allowing you to build, run, schedule, and operationalize your data pipelines at scale. It supports both [batch and streaming workflows](https://discourse.prefect.io/t/how-to-use-prefect-2-0-for-streaming-and-event-driven-use-cases/1000) and provides an excellent developer experience allowing you to run your flows locally and seamlessly move to production and to Cloud when you’re ready.
+[Prefect 2.0](https://www.prefect.io/blog/introducing-prefect-2-0/) is a general-purpose orchestration and dataflow coordination platform allowing you to build, run, schedule, and operationalize your dataflow at scale. It supports both [batch and streaming workflows](https://discourse.prefect.io/t/how-to-use-prefect-2-0-for-streaming-and-event-driven-use-cases/1000) and provides an excellent developer experience allowing you to run your flows locally and seamlessly move to production and to Cloud when you’re ready.
 
 Among [many other features](https://www.prefect.io/opensource/v2/), it natively supports:
 
@@ -70,10 +72,10 @@ Among [many other features](https://www.prefect.io/opensource/v2/), it natively 
 
 ### Install Prefect 
 
-You can **install** **Prefect** using a single command:
+You can **install** Prefect and other dependencies needed for this integration using the command (run this from the home directory which `prefect-openmetadata` was cloned into):
 
 ```yaml
-pip install -U "prefect>=2.0b"
+pip install -r requirements.txt
 ```
 
 To make sure that OpenMetadata logs are stored in the Prefect backend and displayed in the UI, run the following command:
@@ -83,6 +85,9 @@ prefect config set PREFECT_LOGGING_EXTRA_LOGGERS='Ingestion,OMetaAPI,Metadata,Pr
 
 This way, Prefect is aware of the [extra loggers from OpenMetadata](https://discourse.prefect.io/t/how-to-add-extra-loggers-to-prefect-2-0/1040).
 
+
+
+### Self-hosted Orion server
 
 When you install Prefect 2.0, this will not only install the client library, but also an embedded API server and UI, which can *optionally* be started using:
 
@@ -95,3 +100,14 @@ If you navigate to the URL, you’ll be able to access a locally running Prefect
 ```yaml
 http://localhost:4200
 ```
+
+
+### Prefect Cloud
+
+Alternatively, you can sign up for a free [Prefect Cloud](https://app.prefect.cloud/) account and [create a workspace](https://docs.prefect.io/ui/cloud-getting-started/#create-a-workspace).  Then, install Prefect and log into your Cloud workspace from a terminal:
+
+```bash
+pip install prefect
+prefect cloud login
+```
+
