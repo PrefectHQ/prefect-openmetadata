@@ -26,3 +26,4 @@ Released on June 8th, 2022.
 ### Added
 
 - `ingest_metadata` flow - [#1](https://github.com/PrefectHQ/prefect-openmetadata/pull/1)
+- `fix_deployments` - [#18](https://github.com/PrefectHQ/prefect-openmetadata/pull/18)

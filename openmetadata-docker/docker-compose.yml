@@ -34,8 +34,8 @@ services:
       app_net:
         ipv4_address: 172.16.240.11
     ports:
-      - 9200:9200
-      - 9300:9300
+      - "9200:9200"
+      - "9300:9300"
 
   openmetadata-server:
     container_name: openmetadata_server
@@ -49,7 +49,7 @@ services:
       - 9300
       - 3306
     ports:
-      - 8585:8585
+      - "8585:8585"
     depends_on:
       - mysql
     networks:
