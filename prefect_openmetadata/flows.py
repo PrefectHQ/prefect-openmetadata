@@ -114,7 +114,7 @@ def profile_metadata(config: str, is_json: bool = False) -> None:
 @task
 async def make_test_connection(conn_config: TestServiceConnectionRequest) -> None:
     """
-    Task maging a test connection to the specified OpenMetadata connection
+    Task making a test connection to the specified OpenMetadata connection
 
     Args:
         conn_config: connection spec as a pydantic model
