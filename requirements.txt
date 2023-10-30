@@ -1,2 +1,2 @@
-prefect
+prefect >=2.13.5
 openmetadata-ingestion[docker]
