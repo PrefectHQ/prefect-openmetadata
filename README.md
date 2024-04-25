@@ -1,5 +1,12 @@
 # prefect-openmetadata
 
+> [!WARNING]
+> `prefect-openmetadata` is no longer actively maintained. For more details, please see the [Maintenance Status](#maintenance-status) section below.
+
+## Maintenance Status
+
+`prefect-openmetadata` has been a valuable part of the Prefect ecosystem. Due to shifts in our strategic priorities, we have decided to discontinue the active maintenance of this library. While we will not be updating the code or addressing issues, the existing codebase will remain accessible for archival purposes. We appreciate the support and contributions from our community.
+
 ## Welcome!
 
 Using [Prefect](https://prefect.io/) and [OpenMetadata](https://open-metadata.org/) together will help you build and maintain a **data platform you can trust**. 
